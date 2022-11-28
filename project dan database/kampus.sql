@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.3
+-- version 5.1.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Waktu pembuatan: 25 Nov 2022 pada 15.31
--- Versi server: 10.4.22-MariaDB
--- Versi PHP: 7.4.28
+-- Generation Time: Nov 28, 2022 at 06:04 PM
+-- Server version: 10.4.21-MariaDB
+-- PHP Version: 8.0.10
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -24,33 +24,25 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Struktur dari tabel `mahasiswa`
+-- Table structure for table `mahasiswa`
 --
 
 CREATE TABLE `mahasiswa` (
-  `npm` varchar(10) NOT NULL,
-  `nama` varchar(255) NOT NULL,
-  `angkatan` varchar(255) NOT NULL,
-  `sekolah_asal` varchar(255) NOT NULL
+  `nrp` int(100) NOT NULL,
+  `nama` varchar(100) NOT NULL,
+  `angkatan` varchar(4) NOT NULL,
+  `sekolah_asal` varchar(100) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data untuk tabel `mahasiswa`
+-- Dumping data for table `mahasiswa`
 --
 
-INSERT INTO `mahasiswa` (`npm`, `nama`, `angkatan`, `sekolah_asal`) VALUES
-('53419033', 'Madanil1', '2019', 'SMAN 8 Bekasi'),
-('53419497', 'Madanil', '2020', 'SMAN 16 Bekasi');
-
---
--- Indexes for dumped tables
---
-
---
--- Indeks untuk tabel `mahasiswa`
---
-ALTER TABLE `mahasiswa`
-  ADD PRIMARY KEY (`npm`);
+INSERT INTO `mahasiswa` (`nrp`, `nama`, `angkatan`, `sekolah_asal`) VALUES
+(1, 'Fadhilah Nur Amaliah', '2019', 'Universitas Gunadarma'),
+(2, 'Andi Ratu Aqilla', '2019', 'Bekasi'),
+(3, 'Khofifah Adelia', '2019', 'Jakarta'),
+(4, 'Sella Yuri', '2019', 'Tambun');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
